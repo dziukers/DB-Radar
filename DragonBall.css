@@ -117,8 +117,8 @@ body{
     top:50%;
     left:28%;
     transform: translate(-49%, -49%);
-    border-spacing: 6px;
-    width:39%;
+    border-spacing:0px;
+    height:39%;
     text-align: center;
      color:darkorange;
 }

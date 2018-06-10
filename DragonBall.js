@@ -179,9 +179,9 @@ var view = {
         var columns = document.getElementById("define-columns");
         var rows = document.getElementById("define-rows");
         var table = document.getElementById("table");
-            if (click == 1){radar.style.backgroundSize = "80%";table.style.width = "31%";table.style.height = "31%";columns.style.width = "31%";columns.style.top = "33%";rows.style.borderSpacing = ".5vh";rows.style.left = "32%";rows.style.fontSize = "0.8em";return click; }
-             else if (click == 2){radar.style.backgroundSize = "120%";table.style.width = "46%";table.style.height = "46%";columns.style.width = "46%";columns.style.top = "24%";rows.style.borderSpacing = "7px";rows.style.left = "23%";rows.style.fontSize = "1.2em";return click;}
-            else if (click == 3){radar.style.backgroundSize = "100%";table.style.width = "39%";table.style.height = "39%";columns.style.width = "39%";columns.style.top = "28%";rows.style.borderSpacing = "5px";rows.style.left = "28%";rows.style.fontSize = "1em"; click = 0;}
+            if (click == 1){radar.style.backgroundSize = "80%";table.style.width = "31%";table.style.height = "31%";columns.style.width = "31%";columns.style.top = "33%";rows.style.height = "31%";rows.style.left = "32.5%";rows.style.fontSize = "0.8em";return click; }
+             else if (click == 2){radar.style.backgroundSize = "120%";table.style.width = "46%";table.style.height = "46%";columns.style.width = "46%";columns.style.top = "24%";rows.style.height = "46%";rows.style.left = "24%";rows.style.fontSize = "1.2em";return click;}
+            else if (click == 3){radar.style.backgroundSize = "100%";table.style.width = "39%";table.style.height = "39%";columns.style.width = "39%";columns.style.top = "28%";rows.style.height = "39%";rows.style.left = "28%";rows.style.fontSize = "1em"; click = 0;}
     }
 
     function handleKeyPress(e) {
