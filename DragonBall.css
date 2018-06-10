@@ -227,5 +227,11 @@ form input[type=button]{
         50%{background: transparent;}
         60%{background: black;}
         75%{background: transparent;}
+<<<<<<< HEAD
         100% {background: black;}  
     }
+=======
+    100% {background: black;}
+     
+    }
+>>>>>>> d336efc43bcf09dc897104043cb5c7cfa2efbcd4
