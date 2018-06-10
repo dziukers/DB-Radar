@@ -1,0 +1,232 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#container{
+     width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: url("namek.jpg");
+    background-size: cover;
+    background-position: center;
+    z-index: -10;
+    filter: blur(10px);
+
+}
+#black{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1000;
+    background-color: black;
+
+}
+#header{
+    position: absolute;
+    top:0px;
+    color:white;
+}
+#button{
+  
+    width:8vh;
+    height:3vh;
+     background-image: radial-gradient(circle at 0 0, white,grey);
+    border-radius: 5vh 5vh 0 0;  
+    transition: transform 0.2s ease-in-out;
+    z-index: 1;
+    cursor: pointer;
+
+}
+#button:hover{
+    box-shadow: 0px 1px 1px 1px black;
+    transform-origin: top;
+    transform: translate(0,5%);
+    
+}
+#button:active{
+    
+    transform: translate(0,5%);
+}
+#button:focus{
+    transform: translate(0,10%);
+    outline:none;
+    
+}
+#vertical{
+    width:5vh;
+    height: 2vh;
+    background: #aaaaaa;
+    box-shadow: 0px 20px 1px 1px #aaaaaa, inset 0px 5px 1px 1px #000000;
+}
+#radar{
+    background: url("grid.png") repeat center center;
+    background-blend-mode:soft-light;
+    background-size: 100%;
+    margin-bottom: 1em;
+    position:relative;
+    width:60vh;
+    height: 60vh;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 100px 10px black, 0px 0px 1px 2px grey; 
+    border:2vh solid #dddddd;
+    background-color: green;
+    
+  
+}
+#messageArea{
+    text-align: center;
+    font-size:20px;
+    display:inline-block;
+    margin: 10vh;
+    color:black;
+    font-weight: bold;
+    background-color: rgba(255,255,255,0.5);
+    z-index:200;
+}
+#table{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-49%, -49%);
+    border-spacing: 0px;
+    border:2px solid orange;
+    width:39%;
+    height:39%;
+    
+}#define-columns{
+    position: absolute;
+    top:28%;
+    left:50%;
+    transform: translate(-49%, -49%);
+    border-spacing: 0px;
+    width:39%;
+    text-align: center;
+    color:darkorange;
+
+}
+#define-rows{
+    position: absolute;
+    top:50%;
+    left:28%;
+    transform: translate(-49%, -49%);
+    border-spacing: 6px;
+    width:39%;
+    text-align: center;
+     color:darkorange;
+}
+
+#table td{
+
+    border:0px solid rgba(0,0,0,0.5); 
+}
+form{
+    position:absolute;
+    top:0px;
+    left:50%;
+    padding:50px 15px 15px 15px;
+    background-color: rgba(0, 255, 50, 0.5); 
+    border-radius: 30px;
+    transform: translate(-50%,-30%);
+    width:30%;
+    display:flex;
+    justify-content: space-around;
+    transform:
+}
+form input {
+    background-color: rgb(152,207,113);
+    border-color: rgb(83,175,19);
+    border-radius:5px;
+}
+form input[type=text]{
+    width:30%;
+    outline:none;
+transition: width 0.4s ease-in-out;}
+    form input[type=text]:focus{
+    width:100%;}
+form input[type=button]{
+    width:30%;
+}
+.hit{
+    background: url("Dragonballstar.png") no-repeat center center;
+    background-size: 70%;
+    background-position: center;
+}
+.miss {
+    background: url("redx.svg") no-repeat center center;
+    background-size: 70%;
+    background-position: center;
+}
+#frieza{
+    position:absolute;
+    height: 50%;
+    top:-100%;
+    right:26%;
+    transition :top 1s ease-in-out;
+    
+}
+
+#homero{
+
+     position:absolute;
+    height: 80%;
+    left:20%;
+    bottom:10%;
+    visibility:hidden;
+    z-index:-1;
+}
+#x {
+    width:50%;
+    z-index: 100;
+    position:absolute;
+    top:20vh;
+    
+}
+@keyframes anim{
+    from {top: -100%}
+    25% {top:0}
+    50% {top:0}
+    75% {top:0}
+    to {top: -100%}   
+}@keyframes animhomero1{
+    from{left:20%}
+    to {left:0%; visibility:visible;  }
+}@keyframes animhomero2{
+    from{left:2%}
+    to {left:-5%; visibility:visible;  }
+}@keyframes animhomero3{
+    from{left:-5%}
+    to {left:-10%; visibility:visible;  }
+}@keyframes animhomero4{
+    from{left:-10%}
+    to {left:-20%; visibility:visible;  }
+}@keyframes animhomero5{
+    from{left:-20%}
+    to {left:-30%; visibility:visible;  }
+}@keyframes animhomero6{
+    from{left:-30%}
+    to {left:-40%; visibility:visible;  }}
+
+@keyframes shenron{
+   0%{opacity:0;}
+        25%{opacity:1;}
+        50%{opacity:0;}
+        60%{opacity:1;}
+        75%{opacity:0;}
+    100% {opacity:1;}  }
+@keyframes black{
+    0%{background: transparent;}
+        25%{background: black;}
+        50%{background: transparent;}
+        60%{background: black;}
+        75%{background: transparent;}
+    100% {background: black;}
+     
+    }
