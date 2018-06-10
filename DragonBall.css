@@ -228,6 +228,5 @@ form input[type=button]{
         50%{background: transparent;}
         60%{background: black;}
         75%{background: transparent;}
-    100% {background: black;}
-     
+        100% {background: black;}  
     }
