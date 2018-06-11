@@ -44,12 +44,6 @@ var view = {
         }if (ballsFound === 7){
             var container = document.getElementById("black");
             var message = document.getElementById("messageArea");
-              if (controller.guesses >= 15){
-                    black.style.zIndex ="10";
-                    black.style.animation = "black 3s linear forwards";
-                  message.style.animation = "shenron 4s linear forwards";
-                    this.displayMessage("Masz maksymalnie 15 prób.Twoje próby wyniosły " + controller.guesses + ". Spróbuj ponownie");}
-                   else{
                         this.displayMessage("Gratulacje zdobyłeś 7 smoczych kul przy " + controller.guesses + " próbach.");
                         var src = document.getElementById("x");
                         black.style.zIndex ="10";
@@ -66,8 +60,7 @@ var view = {
 
         }
 
-    }
-}   
+    }   
     
     var model = {
         boardSize:7,
