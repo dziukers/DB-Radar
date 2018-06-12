@@ -189,6 +189,10 @@ form input[type=button]{
     top:20vh;
     
 }
+
+#x img{
+    height:80vh;
+}
 @keyframes anim{
     from {top: -100%}
     25% {top:0}
@@ -233,5 +237,4 @@ form input[type=button]{
 =======
     100% {background: black;}
      
-    }
 >>>>>>> d336efc43bcf09dc897104043cb5c7cfa2efbcd4

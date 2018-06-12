@@ -16,7 +16,7 @@ var view = {
     },
     displayImage: function(ballsFound){
                       
-                            
+            
                 
         if (ballsFound == 1){
             var homero = document.getElementById("homero");
@@ -41,7 +41,7 @@ var view = {
             var homero = document.getElementById("homero");
             homero.style.animation = "animhomero6 3s linear forwards";
             this.displayMessage("Znalazłeś 6 smoczą kulę!")
-        }if (ballsFound === 7){
+        } if (ballsFound === 7){
             var container = document.getElementById("black");
             var message = document.getElementById("messageArea");
                         this.displayMessage("Gratulacje zdobyłeś 7 smoczych kul przy " + controller.guesses + " próbach.");
@@ -56,7 +56,7 @@ var view = {
 
                        src.appendChild(shenlong);  
                        
-                   }
+                   }          
 
         }
 
