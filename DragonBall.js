@@ -15,52 +15,43 @@ var view = {
         cell.setAttribute("class", "miss");
     },
     displayImage: function(ballsFound){
-                      
-            
-                
-        if (ballsFound == 1){
-            var homero = document.getElementById("homero");
-            homero.style.animation = "animhomero1 3s linear forwards";
-        }if (ballsFound == 2){
-            var homero = document.getElementById("homero");
+                  
+        var homero = document.getElementById("homero");
+        
+        switch(ballsFound){
+             case 1:
+            homero.style.animation = "animhomero1 3s linear forwards";break; 
+            case 2:
             homero.style.animation = "animhomero2 3s linear forwards";
-            this.displayMessage("Znalazłeś 2 smoczą kulę!")
-        }if (ballsFound == 3){
-            var homero = document.getElementById("homero");
+            this.displayMessage("Znalazłeś 2 smoczą kulę!");  break;
+            case 3:
             homero.style.animation = "animhomero3 3s linear forwards";
-            this.displayMessage("Znalazłeś 3 smoczą kulę!")
-        }if (ballsFound == 4){
-            var homero = document.getElementById("homero");
-            homero.style.animation = "animhomero4 3s linear forwards";
-            this.displayMessage("Znalazłeś 4 smoczą kulę!")
-        }if (ballsFound == 5){
-            var homero = document.getElementById("homero");
+            this.displayMessage("Znalazłeś 3 smoczą kulę!"); break;
+            case 4:homero.style.animation = "animhomero4 3s linear forwards";break;
+            this.displayMessage("Znalazłeś 4 smoczą kulę!");  break;
+            case 5:
             homero.style.animation = "animhomero5 3s linear forwards";
-            this.displayMessage("Znalazłeś 5 smoczą kulę!")
-        }if (ballsFound == 6){
-            var homero = document.getElementById("homero");
+            this.displayMessage("Znalazłeś 5 smoczą kulę!"); break;
+            case 6:
             homero.style.animation = "animhomero6 3s linear forwards";
-            this.displayMessage("Znalazłeś 6 smoczą kulę!")
-        } if (ballsFound === 7){
+            this.displayMessage("Znalazłeś 6 smoczą kulę!"); break;
+            case 7:
             var container = document.getElementById("black");
             var message = document.getElementById("messageArea");
                         this.displayMessage("Gratulacje zdobyłeś 7 smoczych kul przy " + controller.guesses + " próbach.");
-                        var src = document.getElementById("x");
                         black.style.zIndex ="10";
                     message.style.animation = "shenron 4s linear forwards";
                        message.style.color = "white";
                        src.style.animation = "shenron 4s linear forwards";
                     black.style.animation = "black 4s linear forwards";
+                        var src = document.getElementById("x");
                        var shenlong = document.createElement("img");
                        shenlong.src = "shenron.png";
 
-                       src.appendChild(shenlong);  
-                       
-                   }          
-
-        }
-
-    }   
+                       src.appendChild(shenlong);break;
+         }
+    }
+}
     
     var model = {
         boardSize:7,
