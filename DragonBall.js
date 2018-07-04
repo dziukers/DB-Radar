@@ -38,13 +38,14 @@ var view = {
             case 7:
             var container = document.getElementById("black");
             var message = document.getElementById("messageArea");
+                 var src = document.getElementById("x");
                         this.displayMessage("Gratulacje zdobyłeś 7 smoczych kul przy " + controller.guesses + " próbach.");
                         black.style.zIndex ="10";
                     message.style.animation = "shenron 4s linear forwards";
                        message.style.color = "white";
                        src.style.animation = "shenron 4s linear forwards";
                     black.style.animation = "black 4s linear forwards";
-                        var src = document.getElementById("x");
+                       
                        var shenlong = document.createElement("img");
                        shenlong.src = "shenron.png";
 
@@ -53,7 +54,7 @@ var view = {
     }
 }
     
-    var model = {
+var model = {
         boardSize:7,
         numBalls: 7,
         ballsLength:1,
@@ -107,10 +108,10 @@ var view = {
                 return false;
             }
      
-        }
+}
     
    
-    var controller = {
+var controller = {
         guesses: 0,
         
         processGuess: function(guess){
@@ -148,7 +149,7 @@ var view = {
         findButton.onclick = handleFindButton;
         var guessInput = document.getElementById("guessInput");
         guessInput.onkeypress = handleKeyPress;
-
+        revealBalls();
         model.generateBallLocations();
         console.log(model.locations);
 
@@ -181,6 +182,23 @@ var view = {
         controller.processGuess(guess);
         guessInput.value = "";
     }
-    
+    function revealBalls(){
+        
+    var kinto = document.querySelector("#kinto");
+    var ballsLocation  = document.querySelector(".whereAreBalls")
+    var clicked = 0;
+    kinto.addEventListener("click", function(){
+    clicked++;
+    kinto.style.animationPlayState = "paused";
+    ballsLocation.style.animationPlayState = "paused";
+    if(clicked === 2){
+       ballsLocation.textContent = model.locations;
+        ballsLocation.style.opacity = "1";     
+    }
+    else if(clicked === 3){
+    kinto.remove();
+       ballsLocation.remove();
+    }
+})}
 
     window.onload = init;

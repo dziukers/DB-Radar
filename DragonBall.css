@@ -14,12 +14,20 @@ body{
      width: 100vw;
     height: 100vh;
     position: absolute;
-    background: url("namek.jpg");
+    background: url("namek.jpeg");
     background-size: cover;
     background-position: center;
     z-index: -10;
     filter: blur(10px);
 
+}
+#kinto {
+    position: absolute;
+    right: -100%;
+    top:100px;
+    height:100px;
+    animation:kinto-forward 30s linear 15s infinite forwards;
+ 
 }
 #black{
     width: 100vw;
@@ -28,6 +36,17 @@ body{
     z-index: -1000;
     background-color: black;
 
+}
+.whereAreBalls{
+    display:block;
+    background-color:white;
+    position: absolute;
+    right: -100%;
+    top:200px;
+    width:150px;
+    height:100px;
+    opacity:0;
+    animation:kinto-forward 30s linear infinite forwards;
 }
 #header{
     position: absolute;
@@ -192,6 +211,7 @@ form input[type=button]{
 
 #x img{
     height:80vh;
+    z-index: 100;
 }
 @keyframes anim{
     from {top: -100%}
@@ -230,11 +250,10 @@ form input[type=button]{
         25%{background: black;}
         50%{background: transparent;}
         60%{background: black;}
-        75%{background: transparent;}
-<<<<<<< HEAD
-        100% {background: black;}  
-    }
-=======
-    100% {background: black;}
-     
->>>>>>> d336efc43bcf09dc897104043cb5c7cfa2efbcd4
+        75%{background: transparent;}}
+@keyframes kinto-forward{
+    0% {right:-100%;}
+    49%{transform: rotate(0deg)}
+    50%{right:250%;transform: rotateY(180deg)}
+    100% {right:-100%;transform: rotateY(180deg);}
+}
