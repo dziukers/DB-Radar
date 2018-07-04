@@ -26,7 +26,7 @@ body{
     right: -100%;
     top:100px;
     height:100px;
-    animation:kinto-forward 30s linear 15s infinite forwards;
+    animation:kinto 30s linear 15s infinite forwards;
  
 }
 #black{
@@ -46,7 +46,7 @@ body{
     width:150px;
     height:100px;
     opacity:0;
-    animation:kinto-forward 30s linear infinite forwards;
+    animation:kinto-info 30s linear 15s infinite forwards;
 }
 #header{
     position: absolute;
@@ -251,9 +251,14 @@ form input[type=button]{
         50%{background: transparent;}
         60%{background: black;}
         75%{background: transparent;}}
-@keyframes kinto-forward{
+@keyframes kinto{
     0% {right:-100%;}
     49%{transform: rotate(0deg)}
     50%{right:250%;transform: rotateY(180deg)}
-    100% {right:-100%;transform: rotateY(180deg);}
+    100% {right:-100%;transform: rotateY(180deg)}
+}
+@keyframes kinto-info{
+    0% {right:-100%;}
+    50%{right:250%}
+    100% {right:-100%}
 }
